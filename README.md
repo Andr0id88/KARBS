@@ -1,6 +1,6 @@
 # Kali's Auto-Rice Bootstraping Scripts (KARBS)
 
-##Disclaimer:
+## Disclaimer:
 This is nothing i have written myself, this is a modified version of LukeSmithsxyz's larbs.
 I did this just to make it better fit my needs and for testing & learning.
 
@@ -21,9 +21,9 @@ That's it.
 KARBS is a script that autoinstalls and autoconfigures a fully-functioning
 and minimal terminal-and-vim-based Arch Linux environment.
 
-LARBS was originally intended to be run on a fresh install of Arch Linux, and
+KARBS was originally intended to be run on a fresh install of Arch Linux, and
 provides you with a fully configured diving-board for work or more
-customization. But LARBS also works on already configured systems *and* other
+customization. But KARBS also works on already configured systems *and* other
 Arch-based distros such as Manjaro, Antergos and Parabola (although Parabola,
 which uses slightly different repositories might miss one or two minor
 programs).
@@ -47,7 +47,7 @@ Here are some of the things KARBS sets up:
 ## Changes since first release
 
 - More documentation in the `getkeys` program and `mod+shift-e`.
-- Luke's build of st is now the default terminal, instead of urxvt. This
+- Luke Smith's build of st is now the default terminal, instead of urxvt. This
   includes:
   	- Full unicode compatibility
 	- vim-like bindings
@@ -60,7 +60,7 @@ Here are some of the things KARBS sets up:
   possible:
   	- Weather forecasts using `wttr.in`, with highs, lows and rain chance.
 	- Current song information from `mpd`
-	- Unread mail from Luke's `mutt-wizard`
+	- Unread mail
 	- Possible pacman updates
 	- Status of torrents in transmission-daemon
 	- Expected date, time, battery, internet and volume modules
@@ -92,8 +92,8 @@ Here are some of the things KARBS sets up:
 
 ## Customization
 
-By default, LARBS uses the programs [here in progs.csv](progs.csv) and installs
-[my dotfiles repo (voidrice) here](https://github.com/lukesmithxyz/voidrice),
+By default, KARBS uses the programs [here in progs.csv](progs.csv) and installs
+[my dotfiles repo (voidrice) here](https://github.com/Andr0id88/kalivoidrice),
 but you can easily change this by either modifying the default variables at the
 beginning of the script or giving the script one of these options:
 
@@ -104,7 +104,7 @@ beginning of the script or giving the script one of these options:
 
 ### The `progs.csv` list
 
-LARBS will parse the given programs list and install all given programs. Note
+KARBS will parse the given programs list and install all given programs. Note
 that the programs file must be a three column `.csv`.
 
 The first column is a "tag" that determines how the program is installed, ""
