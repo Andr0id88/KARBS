@@ -1,4 +1,4 @@
-# Luke's Auto-Rice Bootstraping Scripts (LARBS)
+# Kali's Auto-Rice Bootstraping Scripts (LARBS)
 
 ##Disclaimer:
 This is nothing i have written myself, this is a modified version of LukeSmithsxyz's larbs.
