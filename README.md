@@ -1,20 +1,24 @@
 # Luke's Auto-Rice Bootstraping Scripts (LARBS)
 
+##Disclaimer:
+This is nothing i have written myself, this is a modified version of LukeSmithsxyz's larbs.
+I did this just to make it better fit my needs and for testing & learning.
 
 ## Installation:
 
 On an Arch based distribution as root, run the following:
 
 ```
-curl -LO lukesmith.xyz/larbs.sh
+git clone https://github.com/Andr0id88/KARBS.git
+cd KARBS
 bash larbs.sh
 ```
 
 That's it.
 
-## What is LARBS?
+## What is KARBS?
 
-LARBS is a script that autoinstalls and autoconfigures a fully-functioning
+KARBS is a script that autoinstalls and autoconfigures a fully-functioning
 and minimal terminal-and-vim-based Arch Linux environment.
 
 LARBS was originally intended to be run on a fresh install of Arch Linux, and
@@ -24,7 +28,7 @@ Arch-based distros such as Manjaro, Antergos and Parabola (although Parabola,
 which uses slightly different repositories might miss one or two minor
 programs).
 
-Here are some of the things LARBS sets up:
+Here are some of the things KARBS sets up:
 
 - Installs i3-gaps, a tiling window manager, with my fully featured
   configuration along with dozens of lightweight and vim-centric terminal
@@ -35,8 +39,7 @@ Here are some of the things LARBS sets up:
   times, as well as commands such as `getkeys` which print the default bindings
   of terminal applications. You can even stream instructional videos on topics
   with `Super+Shift+E`.
-- Installs [my dotfiles](https://github.com/lukesmithxyz/voidrice) giving as
-  popularized on [my YouTube channel](https://youtube.com/c/Lukesmithxyz).
+- Installs [my dotfiles](https://github.com/Andr0id88/kalivoidrice)
 - Sets up system requirements such as users, permissions, networking, audio and
   an AUR manager.
 - All done behind a `dialog` based user interface.
