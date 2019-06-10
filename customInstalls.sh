@@ -15,3 +15,8 @@ omf install lambda
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+#This is needed to get deoplete working in vim.
+:UpdateRemotePlugins
+
+#Test out this command in cli:
+vim -E -c "UpdateRemotePlugins|visual|q|q"
