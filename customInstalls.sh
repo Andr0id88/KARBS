@@ -5,7 +5,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Update\install all vim plugins
-vim -E -c "PlugUpdate|visual|q|q"
+nvim -E -c "PlugUpdate|visual|q|q"
 
 # This is needed to get deoplete working in vim.
 # :UpdateRemotePlugins
