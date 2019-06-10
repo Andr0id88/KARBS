@@ -204,9 +204,12 @@ putgitrepo "https://github.com/Andr0id88/mozillarbs.git" "/home/$name/.mozilla/f
 [ -f /usr/bin/pulseaudio ] && resetpulse
 
 # Install vim `plugged` plugins.
-dialog --infobox "Installing vim plugins..." 4 50
+dialog --infobox "Installing and configuring vim plugins..." 4 50
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 (sleep 30 && killall vim) &
-sudo -u "$name" vim -E -c "PlugUpdate|visual|q|q" >/dev/null
+sudo -u "$name" nvim -E -c "PlugUpdate|visual|q|q" >/dev/null
+sudo -u "$name" nvim -E -c "UpdateRemotePlugins|visual|q|q" >/dev/null
 
 # Enable services here.
 serviceinit NetworkManager cronie
