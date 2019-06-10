@@ -91,14 +91,8 @@ aurinstall() { \
 pipinstall() { \
 	dialog --title "KARBS Installation" --infobox "Installing the Python package \`$1\` ($n of $total). $1 $2" 5 70
 	command -v pip || pacman -S --noconfirm --needed python-pip >/dev/null 2>&1
-	yes | pip install "$1"
+	yes | pip install "$1" >dev/null 2>&1
 	}
-
-fishsetup() { \
-	dialog --title "KARBS Installation" --infobox "Installing fish shell and oh-my-fish"
-	curl -L https://get.oh-my.fish | fish >/dev/null 2>&1
-	omf install lambda >/dev/null 2>&1
-}
 
 plugged() { \
 	dialog --title "KARBS Installation" --infobox "Setting up folders for plugged"
@@ -205,9 +199,6 @@ manualinstall $aurhelper
 # the user has been created and has priviledges to run sudo without a password
 # and all build dependencies are installed.
 installationloop
-
-# This installes oh-my-fish with the lambda theme
-fishsetup
 
 # Install the dotfiles in the user's home directory
 putgitrepo "$dotfilesrepo" "/home/$name"
