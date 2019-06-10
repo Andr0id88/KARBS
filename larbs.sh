@@ -89,10 +89,21 @@ aurinstall() { \
 	}
 
 pipinstall() { \
-	dialog --title "LARBS Installation" --infobox "Installing the Python package \`$1\` ($n of $total). $1 $2" 5 70
+	dialog --title "KARBS Installation" --infobox "Installing the Python package \`$1\` ($n of $total). $1 $2" 5 70
 	command -v pip || pacman -S --noconfirm --needed python-pip >/dev/null 2>&1
 	yes | pip install "$1"
 	}
+
+fishsetup() { \
+	dialog --title "KARBS Installation" --infobox "Installing fish shell and oh-my-fish"
+	curl -L https://get.oh-my-fish | fish >/dev/null 2>&1 && omf install lambda
+}
+
+plugged() { \
+	dialog --title "KARBS Installation" --infobox "Setting up folders for plugged"
+	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+}
 
 installationloop() { \
 	([ -f "$progsfile" ] && cp "$progsfile" /tmp/progs.csv) || curl -Ls "$progsfile" | sed '/^#/d' > /tmp/progs.csv
@@ -194,6 +205,9 @@ manualinstall $aurhelper
 # and all build dependencies are installed.
 installationloop
 
+# This installes oh-my-fish with the lambda theme
+fishsetup
+
 # Install the dotfiles in the user's home directory
 putgitrepo "$dotfilesrepo" "/home/$name"
 
@@ -202,6 +216,8 @@ putgitrepo "https://github.com/Andr0id88/mozillarbs.git" "/home/$name/.mozilla/f
 
 # Pulseaudio, if/when initially installed, often needs a restart to work immediately.
 [ -f /usr/bin/pulseaudio ] && resetpulse
+
+plugged
 
 # Install vim `plugged` plugins.
 dialog --infobox "Installing vim plugins..." 4 50
