@@ -96,7 +96,8 @@ pipinstall() { \
 
 fishsetup() { \
 	dialog --title "KARBS Installation" --infobox "Installing fish shell and oh-my-fish"
-	curl -L https://get.oh-my-fish | fish >/dev/null 2>&1 && omf install lambda
+	curl -L https://get.oh-my.fish | fish >/dev/null 2>&1
+	omf install lambda >/dev/null 2>&1
 }
 
 plugged() { \
