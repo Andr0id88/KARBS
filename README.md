@@ -147,3 +147,4 @@ several basic sudo commands without a password (`shutdown`, `reboot`,
 - Enable tap to click.
 - Keyboard luminosity script.
 - Add notification icons?
+- Add more automaticly deployed config files after programs are installed
