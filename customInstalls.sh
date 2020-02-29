@@ -35,3 +35,7 @@ mkdir -p $HOME/Videos/{tutorials,series,movies}
 mkdir $HOME/Music $HOME/sourcecode
 
 mkdir $HOME/Pictures/{wallpaper,people,logo,meme}
+
+# Download my most important git repo
+
+git clone https://github.com/Andr0id88/vimwiki ~/
