@@ -14,6 +14,10 @@ nvim -E -c "PlugUpdate|visual|q|q"
 nvim -E -c "UpdateRemotePlugins|visual|q|q"
 
 # Installs omf and then the lambda theme
-curl -L https://get.oh-my.fish | fish
-omf install lambda
-bash
+# curl -L https://get.oh-my.fish | fish
+# omf install lambda
+# bash
+
+curl -L git.io/antigen > .config/zsh/antigen.zsh
+
+
