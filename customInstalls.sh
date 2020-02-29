@@ -20,4 +20,18 @@ nvim -E -c "UpdateRemotePlugins|visual|q|q"
 
 curl -L git.io/antigen > .config/zsh/antigen.zsh
 
+# Create home folder structure
 
+mkdir -p $HOME/devops/{ansible,docker,jenkins,k8s,puppet,vagrant,powershell}
+
+mkdir -p $HOME/Documents/{cheatsheets,dotfiles,pkglist}
+
+mkdir -p $HOME/development/{eclipse,projects,visualstudiocode}
+
+mkdir -p $HOME/github/{external,myrepos}
+
+mkdir -p $HOME/Videos/{tutorials,series,movies}
+
+mkdir $HOME/Music $HOME/sourcecode
+
+mkdir $HOME/Pictures/{wallpaper,people,logo,meme}
