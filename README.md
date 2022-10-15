@@ -2,7 +2,7 @@
 
 ## Disclaimer:
 This is nothing i have written myself, this is a modified version of LukeSmithsxyz's larbs.
-I did this just to make it better fit my needs and for testing & learning.
+I forked this repo just to make it better fit my needs and for testing & learning.
 
 ## Installation:
 
@@ -53,8 +53,7 @@ Here are some of the things KARBS sets up:
 	- vim-like bindings
 	- Scrollback with keys and mouse, clipboard use and other add ons to
 	  the default st build
-	- Xresources colors, allowing the use of wal/pywal
-- i3status is the status bar instead of Polybar, which was bloated and failed
+	- Xresources colors, allowing the use of wal/pywal i3status is the status bar instead of Polybar, which was bloated and failed
   to build on many machines. The new i3status includes the modules below, all
   of which are constructed to be as minimal and light on system resources as
   possible:
